@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: root
+    password: salinawg
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+    database: mysql
+
+logging:
+  level:
+    root: warn
+    com.hq.myblog: debug
+  file:
+    name: log/blog.log
+server:
+  port: 8888
+
+comment:
+  avatar:
+    - /images/avatar1.jpg
+    - /images/avatar2.jpg
+    - /images/avatar3.jpg
+    - /images/avatar4.jpg
+    - /images/avatar5.jpg
+    - /images/avatar6.jpg
+    - /images/avatar7.jpg
+    - /images/avatar8.jpg
+    - /images/avatar9.jpg
+    - /images/avatar10.jpg
+    - /images/avatar11.jpg
+    - /images/avatar12.jpg
+    - /images/avatar13.jpg
+    - /images/avatar14.jpg

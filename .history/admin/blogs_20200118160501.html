@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- shift alt + b -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>管理后台</title>
+    <link rel="stylesheet" href="../static/css/me.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+
+</head>
+
+<body style="background-image: url(../static/images/blue-snow.png);">
+<!-- 导航 -->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui secondary stackable inverted menu">
+            <h2 class="ui teal header item">Blog</h2>
+            <a href="" class="active m-item m-mobile-hide item"><i class="home icon"></i>博客</a>
+            <a href="" class="m-item m-mobile-hide item"><i class="idea icon"></i>分类</a>
+            <a href="" class="m-item m-mobile-hide item"><i class="tags icon"></i>标签</a>
+            <div class="right menu">
+                <div class="ui dropdown item m-mobile-hide m-item" style="padding-left:5px">
+                    <div class="text">
+                        <img class="ui avatar image" src="../static/images/avatar.jpg"> CodeGuy
+                        <i class="dropdown icon"></i>
+                    </div>
+
+                    <div class="menu">
+                        <div class="item"><i class="power off icon"></i>注销</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="menu toggle ui black icon button m-top-right m-mobile-show">
+                <i class="icon sidebar"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- 内容 -->
+<div class="m-padded-tb-big m-small-container">
+    <div class="ui container">
+        <form class="ui segment stackable form" action="" method="POST">
+            <div class="inline fields">
+                <div class="six wide field sinput ">
+                    <input type="text" name="title" placeholder="标题">
+                </div>
+                <div class="field sinput ">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="type">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">分类</div>
+                        <div class="menu">
+                            <div class="item" data-value="1">错误日志</div>
+                            <div class="item" data-value="2">开发者手册</div>
+                            <div class="item" data-value="1">错误日志</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field sinput">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="recommend" name="recommend">
+                        <label for="recommend">
+                            推荐
+                        </label>
+                    </div>
+                </div>
+                <div class="field sinput">
+                    <button class="ui teal basic button"><i class="search icon"></i>搜索</button>
+                </div>
+            </div>
+        </form>
+        <table class="ui celled stackable table">
+            <thead>
+            <tr>
+                <th></th>
+                <th>标题</th>
+                <th>类型</th>
+                <th>推荐</th>
+                <th>更新时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>刻意练习清单</td>
+                <td>认知升级</td>
+                <td>是</td>
+                <td>2017-10-02 09:45</td>
+                <td>
+                    <a href="#" class="ui mini basic teal button">编辑</a>
+                    <a href="#" class="ui mini basic red button">删除</a>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="6">
+                    <div class="ui left floated pagination menu">
+                        <a class="item">上一页</a>
+                        <a class="item">下一页</a>
+                    </div>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<!-- 底部 -->
+<footer class="ui inverted vertical segment  m-padded-tb-massive ">
+    <div class="ui center aligned container ">
+        <div class="ui inverted stackable divided grid fluid ">
+            <div class="four wide column left aligned ">
+                <div class="ui fluid card ">
+                    <div class="content ">
+                        <img class="right circular floated tiny ui image " src="../static/images/avatar.jpg ">
+                        <div class="header ">
+                            CodeGuy
+                        </div>
+                        <div class="meta ">
+                            <i class="icon blue mars stroke " style="margin:0px "></i>
+                            <text style="color:black; ">20 years old</text>
+                        </div>
+                        <div class="meta ">
+                            Code from 2017
+                        </div>
+                        <div class="description ">
+                            多写代码多看书, 少说废话少睡觉
+                        </div>
+                    </div>
+                    <div class="extra content ">
+                        <a>
+                            <i class="qq icon "></i>657473650
+                        </a>
+                        <span class="right floated ">
+                                    Joined in 2020
+                                  </span>
+                    </div>
+                </div>
+            </div>
+            <div class="center middle aligned three wide column ">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                <div class="ui inverted link list ">
+                    <a href="# " class="item ">用户故事</a>
+                    <a href="# " class="item ">用户故事</a>
+                    <a href="# " class="item ">用户故事</a>
+                </div>
+            </div>
+            <div class="center aligned three wide column middle aligned ">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <div class="ui inverted link list ">
+                    <a href="# " class="item ">Email: 657473650@qq.com</a>
+                    <a href="# " class="item ">Phone: 18296998548</a>
+
+                </div>
+            </div>
+            <div class="six wide middle aligned column ">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+                <p class="m-text-thin m-text-spaced m-text-tiny-opacity ">这是我的个人博客,我想在这里分享一些自己的心得体会,纪念一下自己踩过的坑</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider "></div>
+        <p class="m-text-thin m-text-spaced m-text-mini-opacity ">Copyright ©2016-2017 CodeGuy Designed CodeGuy</p>
+    </div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').fadeToggle().toggleClass('m-mobile-hide')
+    });
+    $('.ui.dropdown').dropdown();
+</script>
+
+
+</html>

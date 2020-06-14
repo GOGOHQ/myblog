@@ -1,0 +1,85 @@
+2020-06-06 22:54:05.848  INFO 10152 --- [restartedMain] com.hq.myblog.MyblogApplication          : Starting MyblogApplication on DESKTOP-M5H6FC0 with PID 10152 (E:\myBlog\target\classes started by lenovo in E:\myBlog)
+2020-06-06 22:54:05.850 DEBUG 10152 --- [restartedMain] com.hq.myblog.MyblogApplication          : Running with Spring Boot v2.2.3.RELEASE, Spring v5.2.3.RELEASE
+2020-06-06 22:54:05.850  INFO 10152 --- [restartedMain] com.hq.myblog.MyblogApplication          : The following profiles are active: dev
+2020-06-06 22:54:18.407  WARN 10152 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-06 22:54:20.071  INFO 10152 --- [restartedMain] com.hq.myblog.MyblogApplication          : Started MyblogApplication in 16.166 seconds (JVM running for 20.98)
+2020-06-06 22:55:26.307  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:55:26.321  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.index, args=[])
+2020-06-06 22:55:26.339  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:55:26.339  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : result:welcome
+2020-06-06 22:55:37.660  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:55:37.660  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/index, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.index, args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}])
+2020-06-06 22:55:37.710  WARN 10152 --- [http-nio-8888-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-06-06 22:55:37.847  WARN 10152 --- [http-nio-8888-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-06-06 22:55:37.959  INFO 10152 --- [http-nio-8888-exec-3] c.hq.myblog.Controller.IndexController   : blogs:Page 1 of 1 containing com.hq.myblog.Po.Blog instances
+2020-06-06 22:55:37.967  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:55:37.968  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : result:index
+2020-06-06 22:55:42.631  INFO 10152 --- [http-nio-8888-exec-9] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:55:42.632  INFO 10152 --- [http-nio-8888-exec-9] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/footer/newblog, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.fetchRecentBlogs, args=[{}])
+2020-06-06 22:55:42.646  INFO 10152 --- [http-nio-8888-exec-9] c.hq.myblog.Controller.IndexController   : size:1
+2020-06-06 22:55:42.646  INFO 10152 --- [http-nio-8888-exec-9] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:55:42.646  INFO 10152 --- [http-nio-8888-exec-9] com.hq.myblog.Aspect.LogAspect           : result:about :: newsList
+2020-06-06 22:55:53.128  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:55:53.129  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/blogs/12, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.Godetail, args=[12, {}])
+2020-06-06 22:55:53.425  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:55:53.426  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : result:blog
+2020-06-06 22:55:55.667  INFO 10152 --- [http-nio-8888-exec-9] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:55:55.668  INFO 10152 --- [http-nio-8888-exec-9] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/footer/newblog, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.fetchRecentBlogs, args=[{}])
+2020-06-06 22:55:55.694  INFO 10152 --- [http-nio-8888-exec-9] c.hq.myblog.Controller.IndexController   : size:1
+2020-06-06 22:55:55.695  INFO 10152 --- [http-nio-8888-exec-9] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:55:55.696  INFO 10152 --- [http-nio-8888-exec-9] com.hq.myblog.Aspect.LogAspect           : result:about :: newsList
+2020-06-06 22:56:08.161  INFO 10152 --- [http-nio-8888-exec-6] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:56:08.162  INFO 10152 --- [http-nio-8888-exec-6] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/blogs, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.searchBlogs, args=[test, Page request [number: 0, size 8, sort: updateTime: DESC], {}])
+2020-06-06 22:56:08.198  INFO 10152 --- [http-nio-8888-exec-6] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:56:08.199  INFO 10152 --- [http-nio-8888-exec-6] com.hq.myblog.Aspect.LogAspect           : result:search
+2020-06-06 22:56:08.665  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:56:08.666  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/footer/newblog, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.fetchRecentBlogs, args=[{}])
+2020-06-06 22:56:08.690  INFO 10152 --- [http-nio-8888-exec-1] c.hq.myblog.Controller.IndexController   : size:1
+2020-06-06 22:56:08.692  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:56:08.693  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : result:about :: newsList
+2020-06-06 22:56:22.140  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:56:22.141  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/types/-1, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.TypeController.goTypes, args=[{}, -1, Page request [number: 0, size 3, sort: updateTime: DESC]])
+2020-06-06 22:56:22.178  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:56:22.179  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : result:types
+2020-06-06 22:56:22.937  INFO 10152 --- [http-nio-8888-exec-2] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:56:22.937  INFO 10152 --- [http-nio-8888-exec-2] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/footer/newblog, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.fetchRecentBlogs, args=[{}])
+2020-06-06 22:56:22.949  INFO 10152 --- [http-nio-8888-exec-2] c.hq.myblog.Controller.IndexController   : size:1
+2020-06-06 22:56:22.949  INFO 10152 --- [http-nio-8888-exec-2] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:56:22.950  INFO 10152 --- [http-nio-8888-exec-2] com.hq.myblog.Aspect.LogAspect           : result:about :: newsList
+2020-06-06 22:56:47.750  WARN 10152 --- [http-nio-8888-exec-5] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [611] milliseconds.
+2020-06-06 22:56:47.766  INFO 10152 --- [http-nio-8888-exec-5] c.h.m.Controller.Admin.LoginController   : User(id=1, userName=CodeGuy, passWord=acabb4d9d592be2b34aa8ea25f0b5537, email=657473650@qq.com, avatar=https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1991030826,1554640900&fm=111&gp=0.jpg, type=1, createTime=2020-01-29 08:55:27.0, updateTime=2020-06-10 08:55:48.0)
+2020-06-06 22:56:47.768  INFO 10152 --- [http-nio-8888-exec-5] c.h.m.Controller.Admin.LoginController   : 登陆成功:用户User(id=1, userName=CodeGuy, passWord=null, email=657473650@qq.com, avatar=https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1991030826,1554640900&fm=111&gp=0.jpg, type=1, createTime=2020-01-29 08:55:27.0, updateTime=2020-06-10 08:55:48.0)
+2020-06-06 22:56:52.595  INFO 10152 --- [http-nio-8888-exec-7] c.h.m.Controller.Admin.BlogController    : blog:BlogQuery(title=null, TypeId=null, recommend=false, published=false)
+2020-06-06 22:56:59.031  INFO 10152 --- [http-nio-8888-exec-6] c.h.m.Controller.Admin.BlogController    : blog:BlogQuery(title=null, TypeId=null, recommend=false, published=false)
+2020-06-06 22:57:42.184  INFO 10152 --- [http-nio-8888-exec-1] c.h.m.Controller.Admin.BlogController    : blog:Blog(id=null, title=小灰灰, content=#  xiaohuihui
+, firstPicture=http://img0.imgtn.bdimg.com/it/u=1261212322,443801900&fm=26&gp=0.jpg, flag=原创, viewCount=null, likeCount=null, etc=eqwe, description=fdsfsf, appreciation=false, shareStatement=false, commentabled=false, published=true, recommend=true, tagIds=2,3, createTime=null, updateTime=null, user=User(id=1, userName=CodeGuy, passWord=null, email=657473650@qq.com, avatar=https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1991030826,1554640900&fm=111&gp=0.jpg, type=1, createTime=2020-01-29 08:55:27.0, updateTime=2020-06-10 08:55:48.0))
+2020-06-06 22:57:42.184  INFO 10152 --- [http-nio-8888-exec-1] c.h.m.Controller.Admin.BlogController    : falg:原创
+2020-06-06 22:57:42.323  INFO 10152 --- [http-nio-8888-exec-4] c.h.m.Controller.Admin.BlogController    : blog:BlogQuery(title=null, TypeId=null, recommend=false, published=false)
+2020-06-06 22:57:46.213  INFO 10152 --- [http-nio-8888-exec-10] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:57:46.214  INFO 10152 --- [http-nio-8888-exec-10] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/index, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.index, args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}])
+2020-06-06 22:57:46.231  INFO 10152 --- [http-nio-8888-exec-10] c.hq.myblog.Controller.IndexController   : blogs:Page 1 of 1 containing com.hq.myblog.Po.Blog instances
+2020-06-06 22:57:46.234  INFO 10152 --- [http-nio-8888-exec-10] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:57:46.234  INFO 10152 --- [http-nio-8888-exec-10] com.hq.myblog.Aspect.LogAspect           : result:index
+2020-06-06 22:57:46.684  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:57:46.684  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/footer/newblog, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.fetchRecentBlogs, args=[{}])
+2020-06-06 22:57:46.703  INFO 10152 --- [http-nio-8888-exec-3] c.hq.myblog.Controller.IndexController   : size:2
+2020-06-06 22:57:46.705  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:57:46.705  INFO 10152 --- [http-nio-8888-exec-3] com.hq.myblog.Aspect.LogAspect           : result:about :: newsList
+2020-06-06 22:57:49.745  INFO 10152 --- [http-nio-8888-exec-2] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:57:49.746  INFO 10152 --- [http-nio-8888-exec-2] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/blogs/15, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.Godetail, args=[15, {}])
+2020-06-06 22:57:49.764  INFO 10152 --- [http-nio-8888-exec-2] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:57:49.764  INFO 10152 --- [http-nio-8888-exec-2] com.hq.myblog.Aspect.LogAspect           : result:blog
+2020-06-06 22:57:50.423  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:57:50.424  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/footer/newblog, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.fetchRecentBlogs, args=[{}])
+2020-06-06 22:57:50.440  INFO 10152 --- [http-nio-8888-exec-7] c.hq.myblog.Controller.IndexController   : size:2
+2020-06-06 22:57:50.440  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:57:50.440  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : result:about :: newsList
+2020-06-06 22:57:59.990  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:57:59.990  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/archives, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.ArchiveController.goArchive, args=[{}])
+2020-06-06 22:58:00.026  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:58:00.027  INFO 10152 --- [http-nio-8888-exec-7] com.hq.myblog.Aspect.LogAspect           : result:archives
+2020-06-06 22:58:00.410  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : -------------doBefore-------------
+2020-06-06 22:58:00.412  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : RequestObject:LogAspect.RequestLog(url=http://localhost:8888/footer/newblog, ip=0:0:0:0:0:0:0:1, classMethod=com.hq.myblog.Controller.IndexController.fetchRecentBlogs, args=[{}])
+2020-06-06 22:58:00.426  INFO 10152 --- [http-nio-8888-exec-1] c.hq.myblog.Controller.IndexController   : size:2
+2020-06-06 22:58:00.427  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : -------------doAfter-------------
+2020-06-06 22:58:00.427  INFO 10152 --- [http-nio-8888-exec-1] com.hq.myblog.Aspect.LogAspect           : result:about :: newsList

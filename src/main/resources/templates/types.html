@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="animated fadeIn" xmlns:th="http://www.w3.org/1999/xhtml">
+<!-- shift alt + b -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>分类</title>
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/animated.css" th:href="@{/css/animated.css}">
+</head>
+
+<body>
+<!-- 导航 -->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui secondary stackable inverted menu">
+            <a th:href="@{/}"><h2 class="ui teal header item">Blog</h2></a>
+            <a th:href="@{/index}" href="index.html" class="m-item m-mobile-hide item"><i class="home icon"></i>首页</a>
+            <a th:href="@{#}" class="active m-item m-mobile-hide item"><i class="idea icon"></i>分类</a>
+            <a th:href="@{/tags/-1}" href="tags.html" class="m-item m-mobile-hide item"><i class="tags icon"></i>标签</a>
+            <a th:href="@{/archives}" class="m-item m-mobile-hide item"><i class="clone icon"></i>归档</a>
+            <a th:href="@{/about}" class="m-item m-mobile-hide item"><i class="info icon"></i>关于我</a>
+            <div class="m-item right item m-mobile-hide">
+                <div class="ui icon  input">
+                    <form name="search" method="get" th:action="@{/blogs}" target="_blank">
+                        <div class="ui inverted transparent icon  input">
+                            <input type="text" placeholder="Search...." name="query">
+                            <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="menu toggle ui black icon button m-top-right m-mobile-show">
+        <i class="icon sidebar"></i>
+    </a>
+</nav>
+<!-- 内容 -->
+<div class="m-padded-tb-big m-small-container">
+    <div class="ui container">
+        <div class="ui segment top attached">
+            <div class="ui two column middle aligned  grid">
+                <div class="column">
+                    <h3 class="ui teal header">分类</h3>
+                </div>
+                <div class="right aligned column">
+                    共
+                    <h2 class="ui orange header m-inline-block" th:text="${#arrays.length(types)}">14</h2>&nbsp;个
+                </div>
+            </div>
+        </div>
+        <div class="ui segment attached m-padded-tb">
+            <div class="ui labeled button m-margin-tb-tiny" th:each="type : ${types}">
+                <a class="ui basic button" th:text="${type.name}" th:classappend="${type.id==curId}? 'teal'" th:href="@{/types/{id}(id=${type.id})}">思考与感悟</a>
+                <div class="ui basic left pointing label" th:classappend="${type.id==curId}? 'teal'" th:text="${#arrays.length(type.blogs)}">24</div>
+            </div>
+        </div>
+        <div class="ui top attached teal segment">
+            <img class="ui fluid  rounded image" th:src="@{/images/notagblogs.jpg}" style="height:400px" th:if="${blogs.totalElements}==0">
+            <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear" th:each="blog : ${blogs}"  th:onclick="'javascript:toBlog(\''+${blog.id}+'\')'">
+                <div class="ui stackable mobile reversed grid">
+                    <div class="ten wide column">
+                        <h3 class="ui header"><a th:text="${blog.title}" th:href="@{/blogs/{id}(id=${blog.id})}"
+                                                 class="m-black" target="_blank">你真的理解什么是财务自由吗?></a></h3>
+                        <p class="m-text" th:text="|${blog.description}............|">
+                            正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是,我们很多人很多时候根本没有对正确目标的定义,甚至根本从来没有了解自己在做什么.......</p>
+                        <div class="ui stackable grid">
+                            <div class="thirteen wide column">
+                                <div class="ui horizontal middle aligned link list ">
+                                    <div class="item">
+                                        <img src="../static/images/avatar.jpg" th:src="@{${blog.user.avatar}}"
+                                             alt="" class="ui avatar image">
+                                        <div class="content">
+                                            <div class="header" th:text="${blog.user.userName}">CodeGuy</div>
+                                        </div>
+                                    </div>
+                                    <div class="item" style="padding-bottom: 0px;">
+                                        <i class="calendar icon"
+                                           style="display: inline-block;margin-bottom: 5px;margin-right: 5px !important;"></i><span
+                                            th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}"
+                                            style="padding-top: 10px"></span>
+                                    </div>
+                                    <div class="item" style="padding-bottom: 0px;">
+                                        <i class="eye icon"
+                                           style="display: inline-block;margin-bottom: 5px;margin-right: 5px !important;"></i><span
+                                            th:text="${blog.viewCount}" style="padding-top: 10px"></span>
+                                    </div>
+                                    <div class="item" style="padding-bottom: 0px;">
+                                        <i class="heart icon"
+                                           style="display: inline-block;margin-bottom: 5px;margin-right: 5px !important;"></i><span
+                                            th:text="${blog.likeCount}" style="padding-top: 10px"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right aligned three wide column " style="padding-bottom: 0px;">
+                                <a href="# " target="_blank " th:text="${blog.type.name}"
+                                   class="ui teal basic label">认知升级</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="six wide column ">
+                        <a href="blog.html" target="_blank " th:href="@{/blogs/{id}(id=${blog.id})}">
+                            <img src="http://img0.imgtn.bdimg.com/it/u=2652102045,1518642165&fm=26&gp=0.jpg "
+                                 alt=" " class="ui fluid rounded image"
+                                 th:src="@{${blog.firstPicture}}" style="height: 185px!important;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment bottom attached " th:if="${blogs.totalPages}>1">
+            <div class="ui middle aligned two column grid ">
+                <div class="column ">
+                    <a href="# " class="ui small teal basic button"
+                       th:href="@{/types/${curId}/(page=${blogs.number}-1)}"
+                       th:unless="${blogs.first}">上一页</a>
+                </div>
+                <div class="right aligned column ">
+                    <a href="# " class="ui small teal basic button"
+                       th:href="@{/types/${curId}/(page=${blogs.number}+1)}"
+                       th:unless="${blogs.last}">下一页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+<footer class=" ui inverted vertical segment m-padded-tb-massive ">
+    <div class="ui center aligned container ">
+        <div class="ui inverted stackable divided grid fluid ">
+            <div class="four wide column left aligned ">
+                <div class="ui fluid card ">
+                    <div class="content ">
+                        <img class="right circular floated tiny ui image "
+                             src="../static/images/avatar.jpg"
+                             th:src="@{/images/avatar.jpg}">
+                        <div class="header ">
+                            CodeGuy
+                        </div>
+                        <div class="meta ">
+                            <i class="icon blue mars stroke " style="margin:0px "></i>
+                            <text style="color:black; ">20 years old</text>
+                        </div>
+                        <div class="meta ">
+                            Code from 2017
+                        </div>
+                        <div class="description ">
+                            多写代码多看书, 少说废话少睡觉
+                        </div>
+                    </div>
+                    <div class="extra content ">
+                        <a>
+                            <i class="qq icon "></i>657473650
+                        </a>
+                        <span class="right floated ">
+                                    Joined in 2020
+                                  </span>
+                    </div>
+                </div>
+            </div>
+            <div class="center middle aligned three wide column " id="newblog-container">
+                <div class="ui inverted link list" th:fragment="newsList" style="padding-bottom: 18px">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <a href="# " class="item" th:each="blog : ${newblogs}" th:text="${blog.title}"
+                       th:href="@{/blogs/{id}(id=${blog.id})}">用户故事</a>
+                </div>
+            </div>
+            <div class="center aligned three wide column middle aligned ">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <div class="ui inverted link list ">
+                    <a href="# " class="item ">Email: 657473650@qq.com</a>
+                    <a href="# " class="item ">Phone: 18296998548</a>
+
+                </div>
+            </div>
+            <div class="six wide middle aligned column ">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+                <p class="m-text-thin m-text-spaced m-text-tiny-opacity ">
+                    这是我的个人博客,我想在这里分享一些自己的心得体会,纪念一下自己踩过的坑</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider "></div>
+        <p class="m-text-thin m-text-spaced m-text-mini-opacity ">Copyright ©2016-2017 CodeGuy Designed
+            CodeGuy</p>
+    </div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script>
+    function toBlog(aaa) {
+        window.location.href = "/blogs/" + aaa;
+    }
+    $('.menu.toggle').click(function () {
+        $('.m-item').fadeToggle().toggleClass('m-mobile-hide')
+    });
+    $(function () {
+        $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+    })
+</script>
+
+
+</html>

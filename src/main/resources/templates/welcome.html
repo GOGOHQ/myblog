@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>从心</title>
+
+    <link rel="stylesheet" href="../static/css/chinaz.css" th:href="@{/css/chinaz.css}">
+
+</head>
+
+<body>
+<nav class="ui  attached segment m-padded-tb-mini m-shadow-small " style="background-color: #85949c;">
+    <div class="ui container">
+        <div class="ui secondary stackable  menu">
+            <h1 class="ui white header item" style="color:white">Blog</h1>
+            <a href="index.html" class="m-item m-mobile-hide item" style="color:white;font-size: 17px;" th:href="@{/index}"><i
+                    class="home icon"></i>首页</a>
+            <a th:href="@{/types/-1}" href="types.html" class="m-item m-mobile-hide item" style="color:white;font-size: 17px;"><i
+                    class="idea icon"></i>分类</a>
+            <a th:href="@{/tags/-1}" href="tags.html" class="m-item m-mobile-hide item" style="color:white;font-size: 17px;"><i
+                    class="tags icon"></i>标签</a>
+            <a th:href="@{/archives}" href="archives.html" class="m-item m-mobile-hide item" style="color:white;font-size: 17px;"><i
+                    class="clone icon"></i>归档</a>
+            <a th:href="@{/about}" href="about.html" class="m-item m-mobile-hide item" style="color:white;font-size: 17px;"><i
+                    class="info icon"></i>关于我</a>
+            <div class="m-item right item m-mobile-hide">
+                <div class="ui icon  input">
+                    <form name="search" method="get" th:action="@{/blogs}" target="_blank">
+                        <div class="ui icon  input">
+                        <input type="text" placeholder="Search...." name="query">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+<div class="weather_cloudy_width" style="padding:0px">
+    <div class="shatan_width">
+        <div class="weather_sunny_shatan"><i class="weather_sunny_shatan_content"></i></div>
+    </div>
+    <div class="weather_cloudy">
+        <div class="weather_cloudy_xiong"><i class="weather_cloudy_xiong_content"></i></div>
+        <div class="weather_cloudy_shu"><i class="weather_cloudy_shu_content"></i></div>
+        <div class="weather_cloudy_xiongyingzi"><i class="weather_cloudy_xiongyingzi_content"></i></div>
+        <div class="weather_cloudy_shuye1"><i class="weather_cloudy_shuye1_content"></i></div>
+        <div class="weather_cloudy_shuye2"><i class="weather_cloudy_shuye2_content"></i></div>
+        <div class="weather_cloudy_yun1"><i class="weather_cloudy_yun1_content"></i></div>
+        <div class="weather_cloudy_yun2"><i class="weather_cloudy_yun2_content"></i></div>
+        <div class="weather_cloudy_yun3"><i class="weather_cloudy_yun3_content"></i></div>
+        <div class="weather_cloudy_yun4"><i class="weather_cloudy_yun4_content"></i></div>
+        <div class="weather_sunny_taiyang"><i class="weather_sunny_taiyang_content"></i></div>
+        <div class="weather_cloudy_xiaoniao"><i class="weather_cloudy_xiaoniao_content"></i></div>
+        <div class="weather_fog_dengta"><i class="weather_fog_dengta_content"></i></div>
+        <div class="weather_sunny_xiong"><i class="weather_sunny_xiong_content"></i></div>
+        <div class="weather_sunny_xiong"><i class="weather_sunny_xiong_content"></i></div>
+        <div class="weather_sunny_qiqiu"><i class="weather_sunny_qiqiu_content"></i></div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

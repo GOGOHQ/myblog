@@ -1,0 +1,15 @@
+package com.hq.myblog.Vo;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class BlogQuery {
+    private String title;
+    private Long TypeId;
+    private boolean recommend;
+    private boolean published;
+}

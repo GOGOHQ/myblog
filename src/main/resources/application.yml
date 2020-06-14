@@ -1,0 +1,10 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+  mvc:
+    date-format: yyyy-MM-dd
+    hiddenmethod:
+      filter:
+        enabled: true
